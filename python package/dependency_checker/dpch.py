@@ -5,7 +5,8 @@ import requests
 import openpyxl
 import base64
 import json
-from openpyxl import Workbook  
+from openpyxl import Workbook 
+import csv
 #check csv file first row
 #change lenght in for loop
 
@@ -114,23 +115,22 @@ def parse_file(args):
         return "Please give github email"
     try:
         file_name = args.file
-        wb = openpyxl.load_workbook(file_name)
-        worksheet = wb["Sheet1"]
         repo_list = []
-        for row in worksheet.iter_rows():
-            row_data = list()
-            for cell in row:
-                row_data.append(str(cell.value))
-            repo_list.append(row_data)
+        with open(file_name, 'r') as file:
+            csvreader = csv.reader(file)
+            for row in csvreader:
+                repo_list.append(row)
     except:
-        return "File not found"
-    username = args.user
-    token = args.auth
-    dep_list = args.dep.split('@')
-    dep_name = dep_list[0]
-    dep_ver = dep_list[1]
-    user_email = args.email
-    output = []
+        print("No file found")
+        
+        username = args.user
+        token = args.auth
+        dep_list = args.dep.split('@')
+        dep_name = dep_list[0]
+        dep_ver = dep_list[1]
+        user_email = args.email
+        output = []
+   
 
     if args.u:
         output.append(["name", "repo-link", "version", "version-satisfies", "update_pr"])
@@ -178,7 +178,7 @@ def parse_file(args):
     wb.save('./output.csv') 
     return "Output saved in output.csv file"
 
-def main():
+if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--file', type=str, help="It is used for inputting a file")
     parser.add_argument('--u', '--foo', action='store_true', help="It is used for updating a file")
