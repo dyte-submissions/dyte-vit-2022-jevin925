@@ -112,12 +112,17 @@ Dependency checker made with python and it is also converted in a package for ea
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Output
-### Executing in command line by python package :
-![alt text](images/input.jpeg)
+### Executing in command line by python package(with update) :
+![alt text](images/inputwithu.jpeg)
 
-### Output file :
-![alt text](images/output.jpeg)
+### Output file with update command :
+![alt text](images/outputwithu.jpeg)
 
+### Executing in command line by python package(without update) :
+![alt text](images/inputwithoutu.jpeg)
+
+### Output file without update command :
+![alt text](images/outputwithoutu.jpeg)
 # Contact
 
 Jevin Vekaria - jevn925@gmail.com
