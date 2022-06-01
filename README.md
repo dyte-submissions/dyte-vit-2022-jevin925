@@ -30,7 +30,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Automating dependency check in github</h3>
+<h3 align="center">Automating dependency check with github</h3>
 
 </div>
 
@@ -65,126 +65,93 @@
 
 
 
-
-
-
 ### Built With
 
 * [Python](https://www.python.org/)
 * [Github api](https://docs.github.com/en/rest)
+* [Pypi](https://pypi.org/project/dependency-checker-dpch/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## About the project
 
+Dependency checker made with python and it is also converted in a package for easy installation in linux and macOS environment.
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+### Features
+1. Made python package for easy installation of packages in linux.
+2. CLI tool implemented.
+3. Response saved in csv file.
+
 
 ### Prerequisites
+1. Python
+2. pip
+3. virtual environment
 
-This is an example of how to list things you need to use the software and how to install them.
+### Running with python package(converted python file into a package)
 
+1. Open command prompt install package
+   ```sh
+   Install package command: pip install dependency-checker-dpch
+   To install pip in linux: sudo apt install python3-pip
+   ```
+2. Open cmd and write command for executing the file
+   ```sh
+   dpch --file <csv file name> --dep <dependency to check> --user <github username> --auth <github auth toke> --email <email of your github account> --u <no parameters just wirte it if you need to update the version and create PR>
+   ```
+   ```sh
+   example command: dpch --file D:\jevin\dyte-assignment\demo.xlsx --dep morgan@1.10.0  --user jevin925 --auth ghp_EnMy*************3qAAf3SRgt1 --email jevin925@gmail.com --u
+   ```
+   ```sh
+   Note: If you are giving only file name in input make sure the file is present in your current directory.
+   ```
+3. Output will be save in file output.csv at your current woking directory.
 
-### Installation
+### Running the file manually
 
-1. Clone the repo
+1. Clone the repo and cd into dependency checker folder
    ```sh
    git clone https://github.com/dyte-submissions/dyte-vit-2022-jevin925.git
    ```
-   ### or
-   Download the exe file 
+   
+2. Make virtual environment and activate it
    ```sh
-   git clone https://github.com/dyte-submissions/dyte-vit-2022-jevin925.git
+   virtual environment command: py -m venv <env name>
+   activating command: <env name>\Scripts\activate.bat
    ```
-3. Install NPM packages
+3. Install all dependencies from requirements.txt
    ```sh
-   npm install
+   install command: pip install -r requirements.txt
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+4. Run command in terminal
+   ```sh
+   python <name of file> --file <csv file name> --dep <dependency to check> --user <github username> --auth <github auth toke> --email <email of your github account> --u <no parameters just wirte it if you need to update the version and create PR>
+    ```
+   ```sh
+   example command:  python dep_chk.py --file D:\jevin\dyte-assignment\demo.xlsx --dep morgan@1.10.0  --user jevin925 --auth ghp_EnMy*************3qAAf3SRgt1 --email jevin925@gmail.com --u
    ```
+   ```sh
+   Note: If you are giving only file name in input make sure the file is present in your current directory.
+   ```
+3. Output will be save in file output.csv at your current woking directory.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## Output
+### Executing in command line by python package
+![alt text](images/input.jpeg)
 
+### Output file 
+![alt text](images/output.jpeg)
 
 <!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+<!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
