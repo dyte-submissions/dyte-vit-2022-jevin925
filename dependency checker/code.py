@@ -122,13 +122,13 @@ def parse_file(args):
     except:
         print("No file found")
         
-        username = args.user
-        token = args.auth
-        dep_list = args.dep.split('@')
-        dep_name = dep_list[0]
-        dep_ver = dep_list[1]
-        user_email = args.email
-        output = []
+    username = args.user
+    token = args.auth
+    dep_list = args.dep.split('@')
+    dep_name = dep_list[0]
+    dep_ver = dep_list[1]
+    user_email = args.email
+    output = []
    
 
     if args.u:

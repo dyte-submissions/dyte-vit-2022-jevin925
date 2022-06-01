@@ -7,8 +7,7 @@ import base64
 import json
 from openpyxl import Workbook 
 import csv
-#check csv file first row
-#change lenght in for loop
+
 
 
 #Create fork
@@ -35,9 +34,9 @@ def comp_ver(curr_ver, dep_ver):
             #print("version true")
             return True
         if n<m:
-            #print("version false")
+            
             return False
-    #print("version true")
+   
     return True
 
 def update_version(data, dep_name, dep_ver, username, repo_name, user_email, sha, token):
@@ -77,7 +76,7 @@ def check_and_update_version(dep_name,  dep_ver, username, repo_name, user_email
             if not comp_res and to_update == True:
                 data['dependencies'][dep_name]=sym+dep_ver
                 update_version(data, dep_name, dep_ver, username, repo_name, user_email, req['sha'], token)
-                #print("version checked and updated")
+                
                 return [True,curr_ver, "false"]
 
             else:
@@ -123,13 +122,13 @@ def parse_file(args):
     except:
         print("No file found")
         
-        username = args.user
-        token = args.auth
-        dep_list = args.dep.split('@')
-        dep_name = dep_list[0]
-        dep_ver = dep_list[1]
-        user_email = args.email
-        output = []
+    username = args.user
+    token = args.auth
+    dep_list = args.dep.split('@')
+    dep_name = dep_list[0]
+    dep_ver = dep_list[1]
+    user_email = args.email
+    output = []
    
 
     if args.u:
@@ -141,7 +140,7 @@ def parse_file(args):
             own_user = repo_link.split('/')[3]
             flag = 0
 
-            #print(repo_name, own_user, username, token)
+           
             f_res = create_fork(repo_name,own_user, username, token)
             if f_res:
                 c_res,c_ver,msg = check_and_update_version(dep_name, dep_ver, username, repo_name, user_email, token, True)
@@ -160,7 +159,7 @@ def parse_file(args):
             repo_name = repo_link.split('/')[4]
             own_user = repo_link.split('/')[3]
 
-            #print(repo_name, own_user, username, token)
+           
             f_res = create_fork(repo_name,own_user, username, token)
             if f_res:
                 c_res,c_ver,msg = check_and_update_version(dep_name, dep_ver, username, repo_name, user_email, token, False)
