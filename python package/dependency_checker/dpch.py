@@ -177,7 +177,7 @@ def parse_file(args):
     wb.save('./output.csv') 
     return "Output saved in output.csv file"
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--file', type=str, help="It is used for inputting a file")
     parser.add_argument('--u', '--foo', action='store_true', help="It is used for updating a file")
