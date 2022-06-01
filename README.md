@@ -35,37 +35,7 @@
 </div>
 
 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
-
-### Built With
+## Built With
 
 * [Python](https://www.python.org/)
 * [Github api](https://docs.github.com/en/rest)
@@ -78,7 +48,7 @@
 Dependency checker made with python and it is also converted in a package for easy installation in linux and macOS environment.
 
 <!-- GETTING STARTED -->
-## Getting Started
+# Getting Started
 
 ### Features
 1. Made python package for easy installation of packages in linux.
@@ -141,14 +111,21 @@ Dependency checker made with python and it is also converted in a package for ea
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Output
-### Executing in command line by python package
+# Output
+### Executing in command line by python package :
 ![alt text](images/input.jpeg)
 
-### Output file 
+### Output file :
 ![alt text](images/output.jpeg)
 
-<!-- USAGE EXAMPLES -->
+# Contact
+
+Jevin Vekaria - jevn925@gmail.com
+
+Project Link: [https://github.com/dyte-submissions/dyte-vit-2022-jevin925](https://github.com/dyte-submissions/dyte-vit-2022-jevin925)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 <!-- <p align="right">(<a href="#top">back to top</a>)</p> -->
